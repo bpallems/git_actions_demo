@@ -25,9 +25,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Copy java artifact to current dir
-      run: |
-        cp $GITHUB_WORKSPACE/webapp/target/webapp.war .
-        ls -lrt
+      run: cp $GITHUB_WORKSPACE/webapp/target/webapp.war .
+        
     - name: Login to DockerHub
       uses: docker/login-action@v1 
       with:
