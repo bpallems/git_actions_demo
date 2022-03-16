@@ -27,5 +27,5 @@ jobs:
     - name: list contents
       run: |
         echo $GITHUB_WORKSPACE
-        echo ${{env.GITHUB_WORKSPACE}}
-        echo ${{ env.GITHUB_WORKSPACE }}
+        cd $GITHUB_WORKSPACE
+        ls -lrt
