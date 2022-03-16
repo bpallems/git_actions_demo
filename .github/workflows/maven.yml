@@ -25,4 +25,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: list contents
-      run: ls -lrt
+      run: ls -lrt ${{ env.GITHUB_WORKSPACE }}
