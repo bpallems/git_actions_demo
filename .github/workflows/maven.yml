@@ -39,4 +39,6 @@ jobs:
         context: .
         push: true
         tags: bhanudocker3315/regapp_gita:latest
+    - name: execute k8 command
+      run: kubectl get pods
         
