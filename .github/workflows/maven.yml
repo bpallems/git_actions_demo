@@ -50,5 +50,5 @@ jobs:
     - name: context
       run: |
         kubectl config current-context
-        kubectl config view
+        telnet kubernetes.docker.internal 6443
         
