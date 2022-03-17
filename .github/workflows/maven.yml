@@ -50,5 +50,5 @@ jobs:
     - name: context
       run: |
         kubectl config current-context
-        kubectl get pods
+        kubectl config view
         
