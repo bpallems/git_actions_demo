@@ -50,5 +50,5 @@ jobs:
     - name: context
       run: |
         kubectl config current-context
-        ping kubernetes.docker.internal
+        ant --help
         
