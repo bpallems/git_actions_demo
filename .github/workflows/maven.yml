@@ -50,5 +50,5 @@ jobs:
     - name: context
       run: |
         kubectl config current-context
-        telnet kubernetes.docker.internal 6443
+        ping kubernetes.docker.internal
         
