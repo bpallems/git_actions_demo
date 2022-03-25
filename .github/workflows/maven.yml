@@ -44,6 +44,10 @@ jobs:
        cat build.tag
        cat build.tag >> $GITHUB_ENV
        echo $TAG_VERSION
+       git config --global user.name 'bapllems'
+       git config --global user.email 'mrpratap@gmail.com'
+       git commit -am "auto commit: version update in build.tag"
+       git push
        #git commit -m "Add changes" -a
        #git push
        #env:
