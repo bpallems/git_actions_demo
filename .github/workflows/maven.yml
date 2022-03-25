@@ -77,7 +77,8 @@ jobs:
       uses: imranismail/setup-kustomize@v1
     - name: 'Kustomize build'
       run: |
-        kustomize edit set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }}
+        kustomize edit set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }} > new_config.yml
+        cat new_config.yml
         
         
         
