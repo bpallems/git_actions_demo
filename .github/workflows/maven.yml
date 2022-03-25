@@ -38,9 +38,10 @@ jobs:
        echo build.number: ${values[3]}
        let values[3]=${values[3]}+1
        echo build.number: ${values[3]}
-       #cat << EOF > build.tag
-       #EOF
-       #cat build.tag
+       cat << EOF > build.tag
+       version.number=${values[0]}.${values[1]}.${values[2]}.${values[3]}
+       EOF
+       cat build.tag
        #cat build.tag >> $GITHUB_ENV
        #git commit -m "Add changes" -a
        #git push
