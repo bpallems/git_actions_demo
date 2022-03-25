@@ -4,4 +4,6 @@ resources:
 
 images:
 - name: bhanudocker3315/regapp_gita
-  newTag: ${{ env.TAG_VERSION }}
+  newTag: 22.3.0.12
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
