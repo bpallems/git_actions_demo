@@ -77,8 +77,7 @@ jobs:
       uses: imranismail/setup-kustomize@v1
     - name: 'Kustomize build'
       run: |
-        kustomize edit set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }} > new_config.yml
-        cat new_config.yml
+        kustomize edit set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }}
         kustomize build . > regapp-deploy.yml
         git config --global user.name 'bapllems'
         git config --global user.email 'mrpratap@gmail.com'
