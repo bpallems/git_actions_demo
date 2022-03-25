@@ -1,0 +1,7 @@
+resources:
+- regapp-deploy.yml
+
+
+images:
+- name: bhanudocker3315/regapp
+  newTag: ${{ env.TAG_VERSION }}
