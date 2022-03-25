@@ -29,6 +29,10 @@ jobs:
     - name: Copy java artifact to current dir
       run: cp $GITHUB_WORKSPACE/webapp/target/webapp.war . 
       
+    - name: execute ant script to updated version
+      run: |
+         ant updatebuildnum
+         
     - name: Login to DockerHub
       uses: docker/login-action@v1 
       with:
