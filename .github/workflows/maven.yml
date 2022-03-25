@@ -31,7 +31,11 @@ jobs:
       
     - name: execute ant script to updated version
       run: |
-       sh version_update.sh
+       version_tag=`cat build.tag | grep "version" | cut -d'=' -f2`
+       values=(${version_tag//./ })
+       let values[3]=${values[3]}+1
+       cat << EOF > build.tag
+       EOF
        cat build.tag >> $GITHUB_ENV
        git commit -m "Add changes" -a
        git push
