@@ -45,6 +45,8 @@ jobs:
        cat build.tag >> $GITHUB_ENV
        #git commit -m "Add changes" -a
        #git push
+       env:
+        VERSION_TAG: ${values[0]}.${values[1]}.${values[2]}.${values[3]}
          
     - name: Login to DockerHub
       uses: docker/login-action@v1 
