@@ -42,7 +42,7 @@ jobs:
        version.number=${values[0]}.${values[1]}.${values[2]}.${values[3]}
        EOF
        cat build.tag
-       #cat build.tag >> $GITHUB_ENV
+       cat build.tag >> $GITHUB_ENV
        #git commit -m "Add changes" -a
        #git push
          
@@ -66,6 +66,7 @@ jobs:
         cat ${HOME}/.kube/config
     - name: context
       run: |
+        echo ${version.number}
         kubectl config current-context
         ant --help
         
