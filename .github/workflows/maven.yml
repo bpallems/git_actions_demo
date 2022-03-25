@@ -77,7 +77,7 @@ jobs:
       uses: imranismail/setup-kustomize@v1
     - name: 'Kustomize build'
       run: |
-        kustomize build .
+        kustomize set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }}
         
         
         
