@@ -31,7 +31,10 @@ jobs:
       
     - name: execute ant script to updated version
       run: |
-         ant updatebuildnum
+       sh version_update.sh
+       cat build.tag >> $GITHUB_ENV
+       git commit -m "Add changes" -a
+       git push
          
     - name: Login to DockerHub
       uses: docker/login-action@v1 
@@ -55,4 +58,5 @@ jobs:
       run: |
         kubectl config current-context
         ant --help
+        
         
