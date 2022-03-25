@@ -31,9 +31,9 @@ jobs:
       
     - name: execute ant script to updated version
       run: |
-       ls -lrt
        cat build.tag
-       #version_tag=`cat build.tag | grep "version" | cut -d'=' -f2`
+       version_tag=`cat build.tag | grep "version" | cut -d'=' -f2`
+       echo $version_tag
        #values=(${version_tag//./ })
        #let values[3]=${values[3]}+1
        #cat << EOF > build.tag
