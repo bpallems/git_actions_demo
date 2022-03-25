@@ -3,5 +3,5 @@ resources:
 
 
 images:
-- name: bhanudocker3315/regapp
+- name: bhanudocker3315/regapp_gita
   newTag: ${{ env.TAG_VERSION }}
