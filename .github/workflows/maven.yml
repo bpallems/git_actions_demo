@@ -64,7 +64,9 @@ jobs:
       with:
         context: .
         push: true
-        tags: bhanudocker3315/regapp_gita:latest
+        tags: | 
+          bhanudocker3315/regapp_gita:latest
+          bhanudocker3315/regapp_gita:${env.TAG_VERSION}
         
     - name: kube config
       run: |
@@ -73,8 +75,8 @@ jobs:
         cat ${HOME}/.kube/config
     - name: context
       run: |
-        echo ${version.number}
-        kubectl config current-context
+        #echo ${version.number}
+        #kubectl config current-context
         ant --help
         
         
