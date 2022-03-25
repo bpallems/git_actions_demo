@@ -73,10 +73,12 @@ jobs:
         mkdir ${HOME}/.kube
         echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
         cat ${HOME}/.kube/config
-    - name: context
+    - name: 'Kustomize install'
+      uses: imranismail/setup-kustomize@v1
+    - name: 'Kustomize build'
       run: |
-        #echo ${version.number}
-        #kubectl config current-context
-        ant --help
+        kustomize build .
+        
+        
         
         
