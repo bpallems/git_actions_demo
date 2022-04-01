@@ -1,6 +1,5 @@
 resources:
 - regapp-deploy.yml
-- regapp-service.yml
 
 
 images:
