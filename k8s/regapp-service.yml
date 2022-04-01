@@ -4,6 +4,7 @@ metadata:
   name: regapp-service-gita
   labels:
     app: regapp-gita
+  namespace: default
 spec:
   selector:
     app: regapp-gita 
