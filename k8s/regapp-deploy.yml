@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: regapp
+    app: regapp-gita
   name: deploy-regapp-gita
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: regapp
+      app: regapp-gita
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        app: regapp
+        app: regapp-gita
     spec:
       containers:
       - image: bhanudocker3315/regapp_gita:22.3.0.17

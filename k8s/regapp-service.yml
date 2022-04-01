@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: regapp-service-gita
   labels:
-    app: regapp 
+    app: regapp-gita
 spec:
   selector:
-    app: regapp 
+    app: regapp-gita 
 
   ports:
     - port: 8092
