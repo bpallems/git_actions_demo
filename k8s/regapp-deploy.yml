@@ -20,7 +20,7 @@ spec:
         app: regapp
     spec:
       containers:
-      - image: bhanudocker3315/regapp_gita:22.3.0.16
+      - image: bhanudocker3315/regapp_gita:22.3.0.17
         imagePullPolicy: Always
         name: regapp
         ports:
