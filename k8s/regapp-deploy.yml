@@ -22,6 +22,6 @@ spec:
       containers:
       - image: bhanudocker3315/regapp_gita:22.3.0.22
         imagePullPolicy: Always
-        name: regapp
+        name: regapp-gita
         ports:
         - containerPort: 8080
