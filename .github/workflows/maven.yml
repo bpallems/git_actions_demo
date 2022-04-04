@@ -77,10 +77,10 @@ jobs:
       uses: imranismail/setup-kustomize@v1
     - name: 'Kustomize build'
       run: |
-        cd k8s
+        #cd k8s
         kustomize edit set image bhanudocker3315/regapp_gita:${{ env.TAG_VERSION }}
         kustomize build . > new-regapp-deploy.yml
-        mv new-regapp-deploy.yml regapp-deploy.yml
+        mv new-regapp-deploy.yml k8s/regapp-deploy.yml
         git config --global user.name 'bapllems'
         git config --global user.email 'mrpratap@gmail.com'
         git commit -am "auto commit: tag update"
