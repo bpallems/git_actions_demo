@@ -1,5 +1,5 @@
 resources:
-- regapp-deploy.yml
+- k8s/regapp-deploy.yml
 
 
 images:
